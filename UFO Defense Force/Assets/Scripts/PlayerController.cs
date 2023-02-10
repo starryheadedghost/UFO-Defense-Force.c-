@@ -11,9 +11,15 @@ public class PlayerController : MonoBehaviour
 
     public float xRange;
 
-    //just a test 
+    public Transform blaster;
+
+    public GameObject laserBolt;
+
+
+
+    /*just a test 
     public float verticalInput;
-    
+    */
 
     // Start is called before the first frame update
     void Start()
@@ -41,12 +47,17 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(xRange,transform.position.y, transform.position.z);
         }
-
-        //testing to get the player to go up and down on the x axis
+        // if space is pressed then pew pew
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            // create laser bolt at the child 
+            Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);
+        }
+        /*testing to get the player to go up and down on the x axis
         verticalInput = Input.GetAxis("Vertical");
 
         transform.Translate(Vector3.up * verticalInput * Time.deltaTime * speed);
-         //it makes it go on the y axis, don't know why I didn't see that coming
+         it makes it go on the y axis, don't know why I didn't see that coming */
          
     }
 }

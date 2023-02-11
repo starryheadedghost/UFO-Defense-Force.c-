@@ -15,17 +15,12 @@ public class PlayerController : MonoBehaviour
 
     public GameObject laserBolt;
 
+    
 
 
     /*just a test 
     public float verticalInput;
     */
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -53,11 +48,18 @@ public class PlayerController : MonoBehaviour
             // create laser bolt at the child 
             Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);
         }
+
+
         /*testing to get the player to go up and down on the x axis
         verticalInput = Input.GetAxis("Vertical");
 
         transform.Translate(Vector3.up * verticalInput * Time.deltaTime * speed);
          it makes it go on the y axis, don't know why I didn't see that coming */
          
+    }
+    // delete any object with trigger
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(other.gameObject);
     }
 }

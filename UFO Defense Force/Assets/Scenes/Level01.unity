@@ -156,7 +156,7 @@ MonoBehaviour:
   - {fileID: 5171968121359205890, guid: 261ed34d2850dfc4ca79e52ee0e0f537, type: 3}
   - {fileID: 8166340358500154507, guid: a994d582df2636442b10cc43d5ac55c8, type: 3}
   spawnRangeX: 17
-  spawnPosZ: 20
+  spawnPosZ: 30
 --- !u!4 &162128201
 Transform:
   m_ObjectHideFlags: 0
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInput: 0
   speed: 25
-  xRange: 25
+  xRange: 32
   blaster: {fileID: 1417694356}
   laserBolt: {fileID: 9029987980803633585, guid: 5f3421d2c6298d94cb27f398dbbd240c, type: 3}
 --- !u!1 &705507993
@@ -435,7 +435,7 @@ Camera:
   far clip plane: 10000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -459,7 +459,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.34, y: 34.71, z: 8.03}
+  m_LocalPosition: {x: 0.34, y: 34.71, z: 13.3}
   m_LocalScale: {x: 1, y: 0.61068, z: 1.1541}
   m_ConstrainProportionsScale: 0
   m_Children: []

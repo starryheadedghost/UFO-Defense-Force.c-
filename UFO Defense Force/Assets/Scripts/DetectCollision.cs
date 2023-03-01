@@ -8,6 +8,9 @@ public class DetectCollision : MonoBehaviour
     private ScoreManager scoreManager; //references scoremanager 
 
     public int scoreToGive;
+
+    public ParticleSystem explosionParticle; //store particle system wowow
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +25,16 @@ public class DetectCollision : MonoBehaviour
         {
         Destroy(other.gameObject); //destroy the game obejct it hits
         Destroy(gameObject); //destroy THIS game object (ufo)
+        Explosion();
         }
+
 
         scoreManager.IncreaseScore(scoreToGive); //increase score
          
+    }
+
+    void Explosion()
+    {
+        Instantiate(explosionParticle, transform.position, transform.rotation);
     }
 }

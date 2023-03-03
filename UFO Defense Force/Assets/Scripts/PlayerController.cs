@@ -15,8 +15,16 @@ public class PlayerController : MonoBehaviour
 
     public GameObject laserBolt;
 
-    
+    //audio 
+    private AudioSource blasterAudio;
+    public AudioClip laserBlast;
 
+    
+    void Start()
+    {
+        //get audiosource
+        blasterAudio = GetComponent<AudioSource>();
+    }
 
     /*just a test 
     public float verticalInput;
@@ -46,7 +54,9 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             // create laser bolt at the child 
+            blasterAudio.PlayOneShot(laserBlast,0.1f); //play blasteraudio 
             Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);
+        
         }
 
 

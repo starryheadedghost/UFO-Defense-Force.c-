@@ -11,9 +11,14 @@ public class DetectCollision : MonoBehaviour
 
     public ParticleSystem explosionParticle; //store particle system wowow
 
+    //audio
+    private AudioSource exploadAudio;
+    public AudioClip expload;
+
     // Start is called before the first frame update
     void Start()
     {
+         exploadAudio = GetComponent<AudioSource>();
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>(); //get scoremanager component 
     }
 
@@ -36,5 +41,8 @@ public class DetectCollision : MonoBehaviour
     void Explosion()
     {
         Instantiate(explosionParticle, transform.position, transform.rotation);
+        exploadAudio.PlayOneShot(expload,0.5f);
     }
+    
+
 }
